@@ -8,16 +8,20 @@
          CareerSwitch
       </title>
       <style>
-         #container {
-         max-width: 720px;
-         margin: 0 auto;
+         #banner {
+           height: 360px;
+           width: 100%;
+           object-fit: cover;
+           margin-bottom: 16;
          }
       </style>
    </head>
    <body>
+     {% include 'nav.html' %}
+     <img class = "img-fluid" id='banner' src="https://aashrithcareerwebsite.aashrith2000.repl.co/static/banner.jpg" height="320" >
       <div class="container">
       <h1 class="text-center mt-2 mb-2 ">{{company_name}} Careers</h1>
-      <img class = "img-fluid" id='banner' src="https://aashrithcareerwebsite.aashrith2000.repl.co/static/banner.jpg" height="320" >
+      
       <p>Welcome to our career openings page! We're thrilled that you're considering a career with us. At Career Switch, we're dedicated to creating a workplace that fosters innovation, creativity, and growth. We're looking for talented individuals who share our values and are committed to making a difference in the world. We invite you to explore our current job openings and join our team!</p>
       <h2 class="text-center mt-2 mb-2">Job Openings</h2>
       <div>
@@ -30,5 +34,6 @@
             <p class="text-center mt-2 mb-2">Copyright Reserved</p>
          </div>
       </div>
+    {% include 'footer.html' %}
    </body>
 </html>
