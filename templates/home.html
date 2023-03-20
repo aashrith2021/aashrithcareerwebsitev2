@@ -9,20 +9,27 @@
       </title>
       <style>
          #banner {
-           height: 360px;
-           width: 100%;
-           object-fit: cover;
-           margin-bottom: 16;
+         height: 360px;
+         width: 100%;
+         object-fit: cover;
+         margin-bottom: 16;
          }
       </style>
    </head>
    <body>
-     {% include 'nav.html' %}
-     <img class = "img-fluid" id='banner' src="https://aashrithcareerwebsite.aashrith2000.repl.co/static/banner.jpg" height="320" >
+      {% include 'nav.html' %}
+      <img class = "img-fluid" id='banner' src="https://aashrithcareerwebsite.aashrith2000.repl.co/static/banner.jpg" height="320" >
       <div class="container">
       <h1 class="text-center mt-2 mb-2 ">{{company_name}} Careers</h1>
-      
-      <p>Welcome to our career openings page! We're thrilled that you're considering a career with us. At Career Switch, we're dedicated to creating a workplace that fosters innovation, creativity, and growth. We're looking for talented individuals who share our values and are committed to making a difference in the world. We invite you to explore our current job openings and join our team!</p>
+      <div class="row" style="margin-bottom:26px">
+      <div class="col-md-6">
+      <p class="lead">Welcome to our career openings page! We're thrilled that you're considering a career with us. At Career Switch, we're dedicated to creating a workplace that fosters innovation, creativity, and growth. We're looking for talented individuals who share our values and are committed to making a difference in the world. We invite you to explore our current job openings and join our team!
+      </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style="height: 320px;border-radius: 4px">
+      </div>
+        </div>
       <h2 class="text-center mt-2 mb-2">Job Openings</h2>
       <div>
          {% for job in jobs %}
@@ -34,6 +41,6 @@
             <p class="text-center mt-2 mb-2">Copyright Reserved</p>
          </div>
       </div>
-    {% include 'footer.html' %}
+      {% include 'footer.html' %}
    </body>
 </html>
